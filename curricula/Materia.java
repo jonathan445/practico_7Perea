@@ -6,6 +6,7 @@
 package curricula;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
@@ -15,9 +16,9 @@ public class Materia {
     private int idMateria;
     private String nombre;
     private int anio;
-    private ArrayList alumnos;
+    private HashSet alumnos;
     
-    public ArrayList<Integer> getAlumnos() {
+    public HashSet<Integer> getAlumnos() {
         return alumnos;
     }
     public boolean equals(Materia materia){
@@ -36,7 +37,7 @@ public class Materia {
         this.anio = anio;
         this.idMateria = idMateria;
         this.nombre = nombre;
-        alumnos = new ArrayList<Integer>();
+        alumnos = new HashSet<Integer>();
     }
 
     public int getIdMateria() {

@@ -6,6 +6,7 @@
 package curricula;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
@@ -15,9 +16,9 @@ public class Alumno {
     private int legajo;
     private String apellido;
     private String nombre;
-    private ArrayList<Integer> materias;
+    private HashSet<Integer> materias;
 
-    public ArrayList getMaterias() {
+    public HashSet getMaterias() {
         return materias;
     }
     
@@ -25,18 +26,12 @@ public class Alumno {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
-        materias = new ArrayList<Integer>();
+        materias = new HashSet<Integer>();
     }
     
     public void agregarMateria(Materia materia){
-        try {
-           MiException.inscripto(this, materia);
-           materia.setAlumnos(legajo);
-           this.materias.add(materia.getIdMateria());
-        }
-        catch (Exception e){
-         System.out.println(e);
-        }
+      materia.setAlumnos(legajo);
+      this.materias.add(materia.getIdMateria());
     }
     public int getLegajo() {
         return legajo;

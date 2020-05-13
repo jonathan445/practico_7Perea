@@ -35,6 +35,8 @@ public class Colegio {
         alumnos.get(1).agregarMateria(materias.get(1));
         alumnos.get(1).agregarMateria(materias.get(2));
         alumnos.get(1).agregarMateria(materias.get(2));
+        
+        System.out.println(alumnos.get(1).getMaterias().size());
     }
     
 }
